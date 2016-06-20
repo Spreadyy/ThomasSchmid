@@ -28,17 +28,21 @@
 
 @media (max-width: 940px) {
 
+    header {
+        position: fixed;
+    }
+
     header .headerBackground {
         padding: 20px 90px 20px 30px;
         height: auto;
     }
 
     header .headerBackground h1 {
-        font-size: 60px;
+        font-size: 35px;
     }
 
     header .headerBackground h2 {
-        font-size: 40px;
+        display: none;
     }
 
     header .mobileNavOpener, header .mobileNavCloser {
