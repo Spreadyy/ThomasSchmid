@@ -51,7 +51,7 @@ header nav {
     font-weight: 600;
 }
 
-header nav.fixed {
+header.fixed nav {
     position: fixed;
     top: 0;
 }
@@ -99,7 +99,7 @@ header .shadowNav {
     float: left;
 }
 
-header nav.fixed + .shadowNav {
+header.fixed .shadowNav {
     height: 50px;
 }
 
