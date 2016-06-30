@@ -19,11 +19,11 @@ $(document).ready(function () {
     function updateNavigationFixed() {
         var headerHeight = $("header .headerBackground").outerHeight();
 
-        if ($(window).scrollTop() > headerHeight && !$("header nav").hasClass("fixed")) {
-            $("header nav").addClass("fixed");
+        if ($(window).scrollTop() > headerHeight && !$("body > header").hasClass("fixed")) {
+            $("body > header").addClass("fixed");
         }
-        else if ($(window).scrollTop() <= headerHeight && $("header nav").hasClass("fixed")) {
-            $("header nav").removeClass("fixed");
+        else if ($(window).scrollTop() <= headerHeight && $("body > header").hasClass("fixed")) {
+            $("body > header").removeClass("fixed");
         }
     }
 

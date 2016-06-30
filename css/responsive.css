@@ -28,41 +28,39 @@
 
 @media (max-width: 940px) {
 
+    header {
+        position: fixed;
+    }
+
     header .headerBackground {
-        padding: 20px 90px 20px 30px;
+        padding: 10px 15px 10px 15px;
         height: auto;
     }
 
     header .headerBackground h1 {
-        font-size: 60px;
+        font-size: 30px;
+        line-height: 50px;
     }
 
     header .headerBackground h2 {
-        font-size: 40px;
+        display: none;
     }
 
     header .mobileNavOpener, header .mobileNavCloser {
         position: fixed;
-        top: -10px;
-        right: -10px;
-        border-radius: 50px;
+        top: 0px;
+        right: 0px;
         height: 50px;
-        width: 50px;
-        padding: 25px;
+        width: 60px;
+        padding: 10px 20px;
         cursor: pointer;
     }
 
     header .mobileNavOpener {
-        background: #333;
-        box-shadow: #000 1px 1px 5px 1px;
         -moz-transition: all 0.4s;
         -o-transition: all 0.4s;
         -webkit-transition: all 0.4s;
         transition: all 0.4s;
-    }
-
-    header .mobileNavOpener:hover {
-        background: #444;
     }
 
     header .mobileNavCloser {
@@ -75,16 +73,20 @@
 
     header .mobileNavOpener span {
         display: inline-block;
-        width: 50px;
-        height: 10px;
-        margin-bottom: 10px;
+        width: 60px;
+        height: 8px;
+        margin-bottom: 13px;
         background: #FFF;
         float: left;
-        box-shadow: #000 1px 1px 1px inset;
+        box-shadow: #000 0 0 5px;
         -moz-transition: all .3s;
         -o-transition: all .3s;
         -webkit-transition: all .3s;
         transition: all .3s;
+    }
+
+    header .mobileNavOpener:active, header .mobileNavOpener:focus {
+        background: #333;
     }
 
     header .mobileNavOpener:active span, header .mobileNavOpener:focus span {
@@ -112,35 +114,29 @@
     }
 
     header nav {
+        position: absolute;
         pointer-events: none;
-        position: fixed;
-        top: 80px;
+        top: 70px;
         right: 0px;
         width: auto;
         height: auto;
         box-shadow: #000 1px 1px 5px 1px;
-        -moz-transition: margin-top 0.4s, opacity 0.4s;
-        -o-transition: margin-top 0.4s, opacity 0.4s;
-        -webkit-transition: margin-top 0.4s, opacity 0.4s;
-        transition: margin-top 0.4s, opacity 0.4s;
-        margin-top: -10px;
+        -moz-transition: transform 0.4s, opacity 0.4s;
+        -o-transition: transform 0.4s, opacity 0.4s;
+        -webkit-transition: transform 0.4s, opacity 0.4s;
+        transition: transform 0.4s, opacity 0.4s;
+        transform: translateY(-10px);
         opacity: 0;
     }
 
     header nav div {
         flex-direction: column;
         width: auto;
-
     }
 
-    header .mobileNavOpener:active + nav, header .mobileNavOpener:focus + nav {
-        margin-top: 0;
-        opacity: 1;
-        pointer-events: all;
-    }
-
+    header .mobileNavOpener:active + nav, header .mobileNavOpener:focus + nav,
     header nav:active, header nav:focus {
-        margin-top: 0;
+        transform: translateY(0px);
         opacity: 1;
         pointer-events: all;
     }
@@ -151,7 +147,12 @@
     }
 
     header .shadowNav {
-        height: 0;
+        height: 70px;
+    }
+
+    /*Because menu is fixed*/
+    section#main {
+        margin-top: 70px;
     }
 
     section.content {
