@@ -28,26 +28,27 @@
 
 @media (max-width: 940px) {
 
-    header {
+    body > header {
         position: fixed;
+        box-shadow: 0px -5px 5px 5px #000;
     }
 
-    header .headerBackground {
+    body > header .headerBackground {
         padding: 10px 15px 10px 15px;
         height: auto;
     }
 
-    header .headerBackground h1 {
+    body > header .headerBackground h1 {
         font-size: 35px;
         font-size: 30px;
         line-height: 50px;
     }
 
-    header .headerBackground h2 {
+    body > header .headerBackground h2 {
         display: none;
     }
 
-    header .mobileNavOpener, header .mobileNavCloser {
+    body > header .mobileNavOpener, header .mobileNavCloser {
         position: fixed;
         top: 0px;
         right: 0px;
@@ -57,22 +58,22 @@
         cursor: pointer;
     }
 
-    header .mobileNavOpener {
+    body > header .mobileNavOpener {
         -moz-transition: all 0.4s;
         -o-transition: all 0.4s;
         -webkit-transition: all 0.4s;
         transition: all 0.4s;
     }
 
-    header .mobileNavCloser {
+    body > header .mobileNavCloser {
         pointer-events: none;
     }
 
-    header .mobileNavOpener:focus + nav + .mobileNavCloser {
+    body > header .mobileNavOpener:focus + nav + .mobileNavCloser {
         pointer-events: initial;
     }
 
-    header .mobileNavOpener span {
+    body > header .mobileNavOpener span {
         display: inline-block;
         width: 60px;
         height: 8px;
@@ -86,15 +87,15 @@
         transition: all .3s;
     }
 
-    header .mobileNavOpener:active, header .mobileNavOpener:focus {
+    body > header .mobileNavOpener:active, body > header .mobileNavOpener:focus {
         background: #333;
     }
 
-    header .mobileNavOpener:active span, header .mobileNavOpener:focus span {
+    body > header .mobileNavOpener:active span, body > header .mobileNavOpener:focus span {
         box-shadow: none;
     }
 
-    header .mobileNavOpener:active .span1, header .mobileNavOpener:focus .span1 {
+    body > header .mobileNavOpener:active .span1, body > header .mobileNavOpener:focus .span1 {
         -moz-transform: rotate(45deg) translateY(14px) translateX(14px);
         -ms-transform: rotate(45deg) translateY(14px) translateX(14px);
         -o-transform: rotate(45deg) translateY(14px) translateX(14px);
@@ -102,11 +103,11 @@
         transform: rotate(45deg) translateY(14px) translateX(14px);
     }
 
-    header .mobileNavOpener:active .span2, header .mobileNavOpener:focus .span2 {
+    body > header .mobileNavOpener:active .span2, body > header .mobileNavOpener:focus .span2 {
         opacity: 0;
     }
 
-    header .mobileNavOpener:active .span3, header .mobileNavOpener:focus .span3 {
+    body > header .mobileNavOpener:active .span3, body > header .mobileNavOpener:focus .span3 {
         -moz-transform: rotate(-45deg) translateY(-14px) translateX(14px);
         -ms-transform: rotate(-45deg) translateY(-14px) translateX(14px);
         -o-transform: rotate(-45deg) translateY(-14px) translateX(14px);
@@ -114,7 +115,7 @@
         transform: rotate(-45deg) translateY(-14px) translateX(14px);
     }
 
-    header nav {
+    body > header nav {
         position: absolute;
         pointer-events: none;
         top: 70px;
@@ -130,25 +131,25 @@
         opacity: 0;
     }
 
-    header nav div {
+    body > header nav div {
         flex-direction: column;
         width: auto;
     }
 
-    header .mobileNavOpener:active + nav, header .mobileNavOpener:focus + nav,
-    header nav:active, header nav:focus {
+    body > header .mobileNavOpener:active + nav, body > header .mobileNavOpener:focus + nav,
+    body > header nav:active, body > header nav:focus {
         transform: translateY(0px);
         opacity: 1;
         pointer-events: all;
     }
 
-    header nav a {
+    body > header nav a {
         border: none !important;
         text-align: left;
     }
 
-    header .shadowNav {
-        height: 70px;
+    body > header .shadowNav {
+        height: 0;
     }
 
     /*Because menu is fixed*/
@@ -163,5 +164,10 @@
     section.content article {
         padding: 15px;
         box-shadow: #000 0 5px 5px -5px inset;
+    }
+
+    section.content article header {
+        margin: -15px -15px 0;
+        padding: 30px 15px 0;
     }
 }

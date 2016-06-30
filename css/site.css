@@ -10,6 +10,7 @@
 header {
     width: 100%;
     float: left;
+    z-index: 1000;
 }
 
 header .headerBackground {
@@ -49,6 +50,7 @@ header nav {
     text-transform: uppercase;
     font-size: 18px;
     font-weight: 600;
+    z-index: 1000;
 }
 
 header.fixed nav {
@@ -106,7 +108,6 @@ header.fixed .shadowNav {
 #main {
     float: left;
     width: 100%;
-    background: url("../images/6.jpg");
     background-size: cover;
     background-position: center center;
 }
@@ -119,16 +120,48 @@ section.content {
 article {
     padding: 30px;
     background: RGBA(255, 255, 255, 0.6);
+    float: left;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+article header {
+    margin: -30px -30px 0;
+    padding: 30px 30px 0;
+    background: url('../images/thomas.png');
+    background-position: right center;
+    position: relative;
+    z-index: 100;
+}
+
+article header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.65) 100%);
 }
 
 article h1 {
     margin: 0 0 10px;
     font-family: 'Roboto', sans-serif;
     font-size: 50px;
-    border-bottom: 2px solid #000;
+    line-height: 60px;
+    padding-top: 2em;
+    color: #FFF;
+    position: relative; /*Hack to make text white*/
 }
 
-article > * {
+article > section {
+    max-width: 100%;
+    width: 100%;
+    overflow: hidden;
+    float: left;
+}
+
+article > section > * {
     max-width: 100%;
 }
 
