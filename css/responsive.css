@@ -38,7 +38,10 @@
     }
 
     header .headerBackground h1 {
+<<<<<<< HEAD
         font-size: 35px;
+=======
+>>>>>>> 3e60539e36bfa546d961e03631fa6d82c7cf4319
         font-size: 30px;
         line-height: 50px;
     }
