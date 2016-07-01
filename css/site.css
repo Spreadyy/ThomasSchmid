@@ -117,7 +117,7 @@ section.content {
     max-width: 1200px;
 }
 
-article {
+section.content > article {
     padding: 30px;
     background: RGBA(255, 255, 255, 0.6);
     float: left;
@@ -125,7 +125,7 @@ article {
     width: 100%;
 }
 
-article header {
+section.content > article header {
     margin: -30px -30px 0;
     padding: 30px 30px 0;
     background: url('../images/thomas.png');
@@ -134,7 +134,7 @@ article header {
     z-index: 100;
 }
 
-article header::before {
+section.content > article header::before {
     content: '';
     position: absolute;
     top: 0;
@@ -144,7 +144,7 @@ article header::before {
     background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.65) 100%);
 }
 
-article h1 {
+section.content > article h1 {
     margin: 0 0 10px;
     font-family: 'Roboto', sans-serif;
     font-size: 50px;
@@ -154,15 +154,20 @@ article h1 {
     position: relative; /*Hack to make text white*/
 }
 
-article > section {
+section.content > article > section {
     max-width: 100%;
     width: 100%;
     overflow: hidden;
     float: left;
 }
 
-article > section > * {
+section.content > article > section > *,
+section.content > article.news > section > article > * {
     max-width: 100%;
+}
+
+article.news article > time {
+    float: right;
 }
 
 footer {
