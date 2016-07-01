@@ -1,1 +1,1 @@
- git push -f origin master:gh-pag
+ git push -f origin master:gh-pages
