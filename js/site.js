@@ -10,6 +10,8 @@ $(document).ready(function () {
         updateNavigationFixedWhenDesktop();
     });
 
+    updateNavigationFixedWhenDesktop();
+
     function updateNavigationFixedWhenDesktop() {
         if ($(window).width() > 820) {
             updateNavigationFixed();
