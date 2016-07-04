@@ -193,13 +193,16 @@ article.news article section:last-child div {
     flex-wrap: wrap;
 }
 
+article.news article section:last-child.oneMedia * {
+    width: 100%;
+}
+
 article.news article section:last-child.multipleMedia {
     flex-wrap: wrap;
 }
 
 article.news article section:last-child.multipleMedia div * {
     flex: 0 1 50%;
-    max-width: 50%;
 }
 
 footer {
