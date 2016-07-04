@@ -170,7 +170,7 @@ article.news article > time {
     float: right;
 }
 
-article.news article div {
+article.news article > div {
     display: flex;
     justify-content: space-between;
 }
@@ -188,15 +188,16 @@ article.news article section:first-child p:last-child {
     margin-bottom: 0;
 }
 
-article.news article section:last-child {
+article.news article section:last-child div {
     display: flex;
+    flex-wrap: wrap;
 }
 
 article.news article section:last-child.multipleMedia {
     flex-wrap: wrap;
 }
 
-article.news article section:last-child.multipleMedia * {
+article.news article section:last-child.multipleMedia div * {
     flex: 0 1 50%;
     max-width: 50%;
 }
