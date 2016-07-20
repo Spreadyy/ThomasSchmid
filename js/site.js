@@ -1,5 +1,7 @@
 ﻿// Write your Javascript code.
 
+var mobileBreakpoint = 923;
+
 $(document).ready(function () {
 
     $(window).scroll(function () {
@@ -8,12 +10,15 @@ $(document).ready(function () {
 
     $(window).resize(function () {
         updateNavigationFixedWhenDesktop();
+        if ($(window).width() <= mobileBreakpoint) {
+            $("body > header").removeClass("fixed");
+        }
     });
 
     updateNavigationFixedWhenDesktop();
 
     function updateNavigationFixedWhenDesktop() {
-        if ($(window).width() > 820) {
+        if ($(window).width() > mobileBreakpoint) {
             updateNavigationFixed();
         }
     }

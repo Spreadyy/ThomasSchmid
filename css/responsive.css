@@ -2,6 +2,12 @@
 @media (max-width: 1240px) {
     section.content {
         margin: 20px 20px;
+        float: left;
+    }
+
+    section.news article > div > section {
+        flex: 0 1 49%;
+        max-width: 49%;
     }
 }
 
@@ -161,13 +167,28 @@
         margin: 0;
     }
 
-    section.content article {
+    section.content > section {
         padding: 15px;
-        box-shadow: #000 0 5px 5px -5px inset;
     }
 
-    section.content article header {
+    section.content > section header {
         margin: -15px -15px 0;
         padding: 30px 15px 0;
+    }
+}
+
+/*for devices smaller than ipad*/
+@media (max-width: 760px) {
+    section.news article > div {
+        flex-wrap: wrap;
+    }
+    
+    section.news article > div > section {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    section.news article section:first-child p:last-child {
+        margin-bottom: 1em;
     }
 }

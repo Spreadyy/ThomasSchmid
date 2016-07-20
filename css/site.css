@@ -117,7 +117,7 @@ section.content {
     max-width: 1200px;
 }
 
-section.content > article {
+section.content > section {
     padding: 30px;
     background: RGBA(255, 255, 255, 0.6);
     float: left;
@@ -125,7 +125,7 @@ section.content > article {
     width: 100%;
 }
 
-section.content > article header {
+section.content > section header {
     margin: -30px -30px 0;
     padding: 30px 30px 0;
     background: url('../images/thomas.png');
@@ -134,7 +134,7 @@ section.content > article header {
     z-index: 100;
 }
 
-section.content > article header::before {
+section.content > section header::before {
     content: '';
     position: absolute;
     top: 0;
@@ -144,7 +144,7 @@ section.content > article header::before {
     background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.65) 100%);
 }
 
-section.content > article h1 {
+section.content > section header > h1 {
     margin: 0 0 10px;
     font-family: 'Roboto', sans-serif;
     font-size: 50px;
@@ -154,57 +154,90 @@ section.content > article h1 {
     position: relative; /*Hack to make text white*/
 }
 
-section.content > article > section {
+section.content section {
     max-width: 100%;
     width: 100%;
     overflow: hidden;
     float: left;
 }
 
-section.content > article > section > *,
-section.content > article.news > section > article > * {
+section.content > section > section > *,
+section.content > section.news > section > article * {
     max-width: 100%;
 }
 
-article.news article > time {
+section.news article > time {
     float: right;
 }
 
-article.news article > div {
+section.news article > div {
     display: flex;
     justify-content: space-between;
 }
 
-article.news article section {
-    flex: 0 0 560px;
+section.news article > div > section {
+    flex: 0 1 560px;
     max-width: 560px;
 }
 
-article.news article section:first-child p:first-child {
+/*text styles (left side)*/
+section.news article section:first-child p:first-child {
     margin-top: 0;
 }
 
-article.news article section:first-child p:last-child {
+section.news article section:first-child p:last-child {
     margin-bottom: 0;
 }
 
-article.news article section:last-child div {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-article.news article section:last-child.oneMedia * {
+/*media styles (right side)*/
+section.news article section:last-child.oneMedia > * {
     width: 100%;
 }
 
-article.news article section:last-child.multipleMedia {
+section.news article section:last-child.multipleMedia > div {
+    display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-article.news article section:last-child.multipleMedia div * {
-    flex: 0 1 50%;
+section.news article section:last-child.multipleMedia > div > div {
+    flex: 0 1 48%;
 }
 
+section.news article section:last-child.multipleMedia > div > div > img {
+    float: left;
+    margin-bottom: 15px;
+}
+
+section.news article section:last-child.multipleMedia {
+    margin-bottom: -15px;
+}
+
+/*Timeline*/
+div#timeline {
+    position: relative;
+    color: #FFF;
+}
+
+div#timeline::before {
+    content: "";
+    width: 4px;
+    height: 100%;
+    background: #333;
+    position: absolute;
+    left: 35px;
+}
+
+div#timeline .timelineYear {
+    position: relative;
+    width: 64px;
+    background: #333;
+    margin: 10px 0;
+    padding: 5px;
+    text-align: center;
+}
+
+/*Footer*/
 footer {
     float: left;
     width: 100%;
