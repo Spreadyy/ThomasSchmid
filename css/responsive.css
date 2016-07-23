@@ -133,7 +133,7 @@
         -o-transition: transform 0.4s, opacity 0.4s;
         -webkit-transition: transform 0.4s, opacity 0.4s;
         transition: transform 0.4s, opacity 0.4s;
-        transform: translateY(-10px);
+        transform: translateX(100%);
         opacity: 0;
     }
 
@@ -144,7 +144,7 @@
 
     body > header .mobileNavOpener:active + nav, body > header .mobileNavOpener:focus + nav,
     body > header nav:active, body > header nav:focus {
-        transform: translateY(0px);
+        transform: translateX(0px);
         opacity: 1;
         pointer-events: all;
     }
