@@ -191,4 +191,32 @@
     section.news article section:first-child p:last-child {
         margin-bottom: 1em;
     }
+
+
+    /*Timeline stuff, maybe move to other breakpoint?*/
+    
+/*
+    div#timeline .timelineEntry .timelineEntryContent::before {
+        position: absolute;
+        top: 3px;
+        left: -11px;
+        display: inline-block;
+        border-top: 9px solid transparent;
+        border-left: 0px solid #333;
+        border-right: 9px solid #333;
+        border-bottom: 9px solid transparent;
+        content: "";
+    }
+
+    div#timeline .timelineEntry .timelineEntryContent::after {
+        position: absolute;
+        top: 4px;
+        left: -8px;
+        display: inline-block;
+        border-top: 8px solid transparent;
+        border-left: 0 solid #fff;
+        border-right: 8px solid #fff;
+        border-bottom: 8px solid transparent;
+        content: "";
+    }*/
 }

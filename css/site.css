@@ -205,7 +205,7 @@ section.news article section:last-child.multipleMedia > div > div {
     flex: 0 1 48%;
 }
 
-section.news article section:last-child.multipleMedia > div > div > img {
+section.news article section:last-child.multipleMedia img {
     float: left;
     margin-bottom: 15px;
 }
