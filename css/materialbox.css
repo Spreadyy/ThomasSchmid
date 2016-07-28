@@ -9,9 +9,10 @@
   will-change: left, top, width, height;
 }
 
+/* Why would anyone want this?
 .materialboxed:hover:not(.active) {
   opacity: .8;
-}
+}*/
 
 .materialboxed.active {
   cursor: zoom-out;

@@ -122,7 +122,7 @@
         }
 
         // Animate image + set z-index
-        origin.css({left: 0, top: 0, "max-width": newWidth, "width": originalWidth })
+        origin.css({left: 0, top: 0, "max-width": Math.max(originalWidth, newWidth), "width": originalWidth })
         .velocity(
           {
             height: newHeight,
@@ -137,9 +137,7 @@
             complete: function(){doneAnimating = true;}
           }
         );
-
-    }); // End origin on click
-
+      }); // End origin on click
 
       // Return on scroll
       $(window).scroll(function() {
