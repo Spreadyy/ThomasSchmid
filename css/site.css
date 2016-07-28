@@ -243,26 +243,42 @@ div#timeline .timelineEntry {
     margin: 20px 0;
 }
 
-div#timeline .timelineEntry .timelineEntryDate {
+div#timeline .timelineEntry .timelineEntryTrophy {
     background: #333;
     margin-left: 35px;
     height: 28px;
     line-height: 28px;
     padding: 0 5px 0 30px;
+    white-space: nowrap;
 }
 
-div#timeline .timelineEntry .timelineEntryDate span {
+div#timeline .timelineEntry .timelineEntryTrophy span {
     display: inline-block;
-    width: 36px;
-    height: 36px;
-    border-radius: 18px;
+    width: 42px;
+    height: 42px;
+    border-radius: 21px;
     background: #333;
     position: absolute;
-    line-height: 36px;
+    line-height: 42px;
     text-align: center;
-    left: 19px;
-    top: -4px;
-    box-shadow: 0 0 0 2px #FFF;
+    left: 16px;
+    top: -7px;
+    box-shadow: 0 0 0 2px #666;
+}
+
+div#timeline .timelineEntry .timelineEntryTrophy span svg {
+	width: 36px;
+	height: 36px;
+	margin-top: 5px;
+}
+div#timeline .timelineEntry .timelineEntryTrophy.trophyGold span svg path {
+    fill: gold;
+}
+div#timeline .timelineEntry .timelineEntryTrophy.trophySilver span svg path {
+    fill: silver;
+}
+div#timeline .timelineEntry .timelineEntryTrophy.trophyBronze span svg path {
+    fill: #8C7853;
 }
 
 div#timeline .timelineEntry .timelineEntryContent::before {
