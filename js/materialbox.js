@@ -122,45 +122,21 @@
         }
 
         // Animate image + set z-index
-        /*if(origin.hasClass('responsive-img')) {*/
-          origin.velocity({'max-width': newWidth, 'width': originalWidth}, {duration: 0, queue: false,
-            complete: function(){
-              origin.css({left: 0, top: 0})
-              .velocity(
-                {
-                  height: newHeight,
-                  width: newWidth,
-                  left: $(document).scrollLeft() + windowWidth/2 - origin.parent('.material-placeholder').offset().left - newWidth/2,
-                  top: $(document).scrollTop() + windowHeight/2 - origin.parent('.material-placeholder').offset().top - newHeight/ 2
-                },
-                {
-                  duration: inDuration,
-                  queue: false,
-                  easing: 'easeOutQuad',
-                  complete: function(){doneAnimating = true;}
-                }
-              );
-            } // End Complete
-          }); // End Velocity
-        /*}
-        else {
-          origin.css('left', 0)
-          .css('top', 0)
-          .velocity(
-            {
-              height: newHeight,
-              width: newWidth,
-              left: $(document).scrollLeft() + windowWidth/2 - origin.parent('.material-placeholder').offset().left - newWidth/2,
-              top: $(document).scrollTop() + windowHeight/2 - origin.parent('.material-placeholder').offset().top - newHeight/ 2
-            },
-            {
-              duration: inDuration,
-              queue: false,
-              easing: 'easeOutQuad',
-              complete: function(){doneAnimating = true;}
-            }
-            ); // End Velocity
-        }*/
+        origin.css({left: 0, top: 0, "max-width": newWidth, "width": originalWidth })
+        .velocity(
+          {
+            height: newHeight,
+            width: newWidth,
+            left: $(document).scrollLeft() + windowWidth/2 - origin.parent('.material-placeholder').offset().left - newWidth/2,
+            top: $(document).scrollTop() + windowHeight/2 - origin.parent('.material-placeholder').offset().top - newHeight/ 2
+          },
+          {
+            duration: inDuration,
+            queue: false,
+            easing: 'easeOutQuad',
+            complete: function(){doneAnimating = true;}
+          }
+        );
 
     }); // End origin on click
 
