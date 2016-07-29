@@ -272,6 +272,10 @@ div#timeline .timelineEntry .timelineEntryTrophy span svg {
 	height: 36px;
 	margin-top: 5px;
 }
+div#timeline .timelineEntry .timelineEntryTrophy.car span svg {
+    transform: rotate(-90deg);
+    margin-top: 2px;
+}
 div#timeline .timelineEntry .timelineEntryTrophy.medal span svg {
     margin-top: 0px;
     height: 40px;
@@ -281,6 +285,9 @@ div#timeline .timelineEntry .timelineEntryTrophy.trophyGold span svg path {
 }
 div#timeline .timelineEntry .timelineEntryTrophy.trophySilver span svg path {
     fill: silver;
+}
+div#timeline .timelineEntry .timelineEntryTrophy.trophyBronze span svg path {
+    fill: #8C7853;
 }
 div#timeline .timelineEntry .timelineEntryTrophy.trophyBronze span svg path {
     fill: #8C7853;
