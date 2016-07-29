@@ -264,12 +264,17 @@ div#timeline .timelineEntry .timelineEntryTrophy span {
     left: 16px;
     top: -7px;
     box-shadow: 0 0 0 2px #666;
+    overflow: hidden;
 }
 
 div#timeline .timelineEntry .timelineEntryTrophy span svg {
 	width: 36px;
 	height: 36px;
 	margin-top: 5px;
+}
+div#timeline .timelineEntry .timelineEntryTrophy.medal span svg {
+    margin-top: 0px;
+    height: 40px;
 }
 div#timeline .timelineEntry .timelineEntryTrophy.trophyGold span svg path {
     fill: gold;
