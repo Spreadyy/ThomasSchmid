@@ -280,18 +280,6 @@ div#timeline .timelineEntry .timelineEntryTrophy.medal span svg {
     margin-top: 0px;
     height: 40px;
 }
-div#timeline .timelineEntry .timelineEntryTrophy.trophyGold span svg path {
-    fill: gold;
-}
-div#timeline .timelineEntry .timelineEntryTrophy.trophySilver span svg path {
-    fill: silver;
-}
-div#timeline .timelineEntry .timelineEntryTrophy.trophyBronze span svg path {
-    fill: #8C7853;
-}
-div#timeline .timelineEntry .timelineEntryTrophy.trophyBronze span svg path {
-    fill: #8C7853;
-}
 
 div#timeline .timelineEntry .timelineEntryContent::before {
     position: absolute;
@@ -324,6 +312,11 @@ div#timeline .timelineEntry .timelineEntryContent {
     border: solid 2px #333;
     padding: 2px 5px;
     position: relative;
+}
+
+div#timeline .timelineEntry .timelineEntryContent div {
+    font-variant: small-caps; /*Fallback for older browsers*/
+    font-variant: all-small-caps;
 }
 
 /*Footer*/
