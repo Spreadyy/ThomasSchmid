@@ -1,0 +1,5 @@
+1. Edit with Adobe AI or http://editor.method.ac
+2. Save SVG file in this directory
+3. Optimize SVG code with http://petercollingridge.appspot.com/svg-optimiser
+3.1. Remove whitespace, just set the style type to "styleString" (otherwise class name problems occur)
+3.2. Copy the code and insert directly in page as inline-SVG
