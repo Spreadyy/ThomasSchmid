@@ -308,6 +308,29 @@ div#timeline .timelineEntry .timelineEntryContent .timelineEntryInfo {
     font-variant: all-small-caps;
 }
 
+section.racecalendar table {
+    width: 100%;
+    text-align: left;
+    border-spacing: 0px;
+}
+
+section.racecalendar table tr th,
+section.racecalendar table tr td {
+    padding: 2px 4px;
+    vertical-align: top;
+}
+
+section.racecalendar table tr th:first-child,
+section.racecalendar table tr td:first-child {
+    padding-left: 0;
+    white-space: nowrap; /*don't break dates*/
+}
+
+section.racecalendar table tr th:last-child,
+section.racecalendar table tr td:last-child {
+    padding-right: 0;
+}
+
 /*Footer*/
 footer {
     float: left;
